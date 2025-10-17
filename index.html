@@ -12,7 +12,7 @@
             color: #333;
         }
         .hero {
-            background-image: url('images/image11.jpg'); /* Use uma das imagens como fundo hero */
+            background-image: url('images/image11.jpg');
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -32,12 +32,41 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
         }
         footer {
             background-color: #343a40;
             color: white;
             padding: 20px 0;
             text-align: center;
+        }
+        /* Animações de Scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .navbar {
+            transition: transform 0.3s ease;
+        }
+        /* Estilo para feedback do formulário */
+        .form-feedback {
+            margin-top: 10px;
+            display: none;
         }
     </style>
 </head>
@@ -63,7 +92,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero animate-on-scroll">
         <div class="text-center">
             <h1>Portfólio de Pintura Profissional</h1>
             <p>Transformando espaços com arte e precisão</p>
@@ -71,7 +100,7 @@
     </section>
 
     <!-- Sobre Section -->
-    <section id="sobre" class="py-5">
+    <section id="sobre" class="py-5 animate-on-scroll">
         <div class="container">
             <h2 class="section-title">Sobre Mim</h2>
             <p class="text-center">Sou João Pintor, um profissional experiente em pinturas decorativas e efeitos especiais. Com anos de dedicação, transformo ambientes comuns em espaços únicos e elegantes, utilizando técnicas avançadas e materiais de alta qualidade. Meu foco é na satisfação do cliente, entregando resultados duradouros e esteticamente impecáveis.</p>
@@ -79,7 +108,7 @@
     </section>
 
     <!-- Serviços Section -->
-    <section id="servicos" class="py-5 bg-light">
+    <section id="servicos" class="py-5 bg-light animate-on-scroll">
         <div class="container">
             <h2 class="section-title">Técnicas e Serviços</h2>
             <div class="row">
@@ -144,52 +173,52 @@
     </section>
 
     <!-- Galeria Section -->
-    <section id="galeria" class="py-5">
+    <section id="galeria" class="py-5 animate-on-scroll">
         <div class="container">
             <h2 class="section-title">Galeria de Trabalhos</h2>
             <div class="row gallery">
-                <div class="col-md-4 mb-4">
-                    <img src="images/image1.jpg" alt="Sala de estar com piso em cimento queimado e vista para piscina">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image1.jpg" alt="Sala de estar com piso em cimento queimado e vista para piscina">
                     <p class="text-center mt-2">Sala com efeito cimento queimado</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image2.jpg" alt="Porta de madeira pintada com tinta automotiva">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image2.jpg" alt="Porta de madeira pintada com tinta automotiva">
                     <p class="text-center mt-2">Porta pintada com tinta automotiva</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image3.jpg" alt="Porta de madeira com verniz automotivo">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image3.jpg" alt="Porta de madeira com verniz automotivo">
                     <p class="text-center mt-2">Detalhe de porta com verniz</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image4.jpg" alt="Quarto decorado com pintura decorativa e porta de madeira">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image4.jpg" alt="Quarto decorado com pintura decorativa e porta de madeira">
                     <p class="text-center mt-2">Quarto com efeitos decorativos</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image5.jpg" alt="Parede com efeito aço corten">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image5.jpg" alt="Parede com efeito aço corten">
                     <p class="text-center mt-2">Efeito aço corten na parede</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image6.jpg" alt="Corredor com piso marmorato">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image6.jpg" alt="Corredor com piso marmorato">
                     <p class="text-center mt-2">Corredor com piso marmorato</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image7.jpg" alt="Porta moderna com design curvo pintada">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image7.jpg" alt="Porta moderna com design curvo pintada">
                     <p class="text-center mt-2">Porta com design decorativo</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image8.jpg" alt="Janelas arqueadas pintadas com verniz automotivo">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image8.jpg" alt="Janelas arqueadas pintadas com verniz automotivo">
                     <p class="text-center mt-2">Janelas com pintura automotiva</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image9.jpg" alt="Sala ampla com janelas grandes e pintura decorativa">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image9.jpg" alt="Sala ampla com janelas grandes e pintura decorativa">
                     <p class="text-center mt-2">Sala com pinturas decorativas</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image10.jpg" alt="Portas pretas com efeito decorativo">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image10.jpg" alt="Portas pretas com efeito decorativo">
                     <p class="text-center mt-2">Portas pretas pintadas</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="images/image11.jpg" alt="Sala com vista para floresta e piso polido">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <img src="image11.jpg" alt="Sala com vista para floresta e piso polido">
                     <p class="text-center mt-2">Sala com efeito marmorato</p>
                 </div>
             </div>
@@ -197,25 +226,26 @@
     </section>
 
     <!-- Contato Section -->
-    <section id="contato" class="py-5 bg-light">
+    <section id="contato" class="py-5 bg-light animate-on-scroll">
         <div class="container">
             <h2 class="section-title">Contato</h2>
             <p class="text-center">Entre em contato para orçamentos ou mais informações.</p>
-            <form class="row justify-content-center">
+            <form id="contactForm" class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Mensagem</label>
-                        <textarea class="form-control" id="message" rows="5"></textarea>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
+                    <div id="formFeedback" class="form-feedback text-center"></div>
                 </div>
             </form>
             <p class="text-center mt-4">Email: joao.pintor@example.com | Telefone: (11) 99999-9999</p>
@@ -223,10 +253,56 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="animate-on-scroll">
         <p>&copy; 2025 João Pintor. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                if (rect.top >= 0 && rect.top < windowHeight - 50) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+
+        // Formulário funcional com Formspree
+        const form = document.getElementById('contactForm');
+        const feedback = document.getElementById('formFeedback');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const response = await fetch('https://formspree.io/f/your-form-id', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                feedback.style.display = 'block';
+                feedback.textContent = 'Mensagem enviada com sucesso! Responderemos em breve.';
+                feedback.classList.add('text-success');
+                form.reset();
+            } else {
+                feedback.style.display = 'block';
+                feedback.textContent = 'Erro ao enviar a mensagem. Tente novamente.';
+                feedback.classList.add('text-danger');
+            }
+
+            setTimeout(() => {
+                feedback.style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
